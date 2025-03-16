@@ -13,12 +13,12 @@
 html,
 body {
   max-width: 100vw;
-  overflow-x: hidden;
+  height: 1000vh;
+  /* overflow-x: hidden; */
 }
 
 body {
   color: var(--foreground);
-  background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -30,13 +30,65 @@ body {
   margin: 0;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+/* .text-wrapper { */
+/*   width: 100vw; */
+/*   height: 100vh; */
+/*   position: relative; */
+/*   display: flex; */
+/*   justify-content: center; */
+/*   align-items: center; */
+/* } */
+
+.text-wrapper {
+  position: absolute;
+  top: 0;
+  botton: 0;
+  left: 0;
+  right: 0;
+
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+.animated-image-foreground {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/image.png");
+  height: 150vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  botton: 0;
+  left: 0;
+  right: 0;
+}
+.animated-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/image.png");
+  filter: blur(10px);
+  height: 150vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  botton: 0;
+  left: 0;
+  right: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+.animated-text {
+  font-size: 100px;
+  scale: 10;
+  width: fit-content;
+  opacity: 0;
+  position: absolute;
+  top: 50vh;
+  botton: -50vh;
+  left: 50vw;
+  right: 0;
 }
